@@ -92,5 +92,3 @@ Done with the main task? Here's some ideas for things to continue with:
 
 1. Implement the free text input to allow entry of any VAT level, like [Driva eget](http://www.driva-eget.se/kalkyler/moms) allows.
 1. Use CSS to make the form look nice.
-1. Validate that the input is a number.
-1. Format the numbers in the fields so they follow the same formatting rules as the site you're taking inspiration from (so the number "11777.66" should be formatted to look like "11 777,66")
