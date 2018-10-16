@@ -1,12 +1,12 @@
 import React from "react"
-import Radio from "./radio"
+import CalcForm from "./calc-form"
 
 class App extends React.Component {
 
   render() {
     return (
       <div className="App">
-        <Radio />
+        <CalcForm />
       </div>
     )
   }

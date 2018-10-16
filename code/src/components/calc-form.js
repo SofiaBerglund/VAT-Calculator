@@ -1,7 +1,7 @@
 import React from "react"
 import { exVatToIncVat, incVatToExtVat } from "../calculations"
 
-class Radio extends React.Component {
+class CalcForm extends React.Component {
 
   constructor(props) {
     super(props)
@@ -41,9 +41,8 @@ class Radio extends React.Component {
       <form>
 
         <div>
-          <label htmlFor="25%">25%</label>
+          <label>25%</label>
           <input
-          id="25%"
           type="radio"
           value="25"
           checked={this.state.vatRate === 25}
@@ -51,9 +50,8 @@ class Radio extends React.Component {
         </div>
 
         <div>
-          <label htmlFor="12%">12%</label>
+          <label>12%</label>
           <input
-          id="12%"
           type="radio"
           value="12"
           checked={this.state.vatRate === 12}
@@ -61,9 +59,8 @@ class Radio extends React.Component {
         </div>
 
         <div>
-          <label htmlFor="6%">6%</label>
+          <label>6%</label>
           <input
-          id="6%"
           type="radio"
           value="6"
           checked={this.state.vatRate === 6}
@@ -71,28 +68,25 @@ class Radio extends React.Component {
         </div>
 
         <div>
-          <label htmlFor="incVAT">Including VAT</label>
+          <label>Including VAT</label>
           <input
           type="number"
-          name="incVat"
           onChange={this.handleIncVatChange}
           value={this.state.incVat} />
         </div>
 
         <div>
-          <label htmlFor="exVAT">Excluding VAT</label>
+          <label>Excluding VAT</label>
           <input
           type="number"
-          name="exVat"
           onChange={this.handleExVatChange}
           value={this.state.exVat} />
         </div>
 
         <div>
-          <label htmlFor="totalVAT">VAT</label>
+          <label>VAT</label>
           <input
           type="number"
-          name="totalVat"
           value={this.state.incVat - this.state.exVat} />
         </div>
 
@@ -102,4 +96,4 @@ class Radio extends React.Component {
 
 }
 
-export default Radio
+export default CalcForm
