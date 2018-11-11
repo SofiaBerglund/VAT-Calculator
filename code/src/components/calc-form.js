@@ -2,7 +2,6 @@ import React from "react"
 import { exVatToIncVat, incVatToExtVat } from "../calculations"
 
 class CalcForm extends React.Component {
-
   constructor(props) {
     super(props)
     this.state = {
@@ -41,7 +40,6 @@ class CalcForm extends React.Component {
       <div className="container">
         <h1>VAT Calculator</h1>
         <form>
-
           <div className="radio-buttons">
             <div className="radio-row">
               <label>25%</label>
@@ -49,7 +47,8 @@ class CalcForm extends React.Component {
                 type="radio"
                 value="25"
                 checked={this.state.vatRate === 25}
-                onChange={this.handleRadioChange} />
+                onChange={this.handleRadioChange}
+              />
             </div>
 
             <div className="radio-row">
@@ -58,7 +57,8 @@ class CalcForm extends React.Component {
                 type="radio"
                 value="12"
                 checked={this.state.vatRate === 12}
-                onChange={this.handleRadioChange} />
+                onChange={this.handleRadioChange}
+              />
             </div>
 
             <div className="radio-row">
@@ -67,7 +67,8 @@ class CalcForm extends React.Component {
                 type="radio"
                 value="6"
                 checked={this.state.vatRate === 6}
-                onChange={this.handleRadioChange} />
+                onChange={this.handleRadioChange}
+              />
             </div>
           </div>
 
@@ -78,7 +79,8 @@ class CalcForm extends React.Component {
                 type="number"
                 placeholder=" amount incl VAT"
                 onChange={this.handleIncVatChange}
-                value={this.state.incVat} />
+                value={this.state.incVat}
+              />
             </div>
 
             <div className="input-row">
@@ -87,22 +89,22 @@ class CalcForm extends React.Component {
                 type="number"
                 placeholder=" amount excl VAT"
                 onChange={this.handleExVatChange}
-                value={this.state.exVat} />
+                value={this.state.exVat}
+              />
             </div>
 
             <div className="input-row">
               <label>Total VAT</label>
               <input
                 type="number"
-                value={this.state.incVat - this.state.exVat} />
+                value={this.state.incVat - this.state.exVat}
+              />
             </div>
           </div>
-
         </form>
       </div>
     )
   }
-
 }
 
 export default CalcForm

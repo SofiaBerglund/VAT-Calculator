@@ -2,7 +2,6 @@ import React from "react"
 import CalcForm from "./calc-form"
 
 class App extends React.Component {
-
   render() {
     return (
       <div className="App">
@@ -10,7 +9,6 @@ class App extends React.Component {
       </div>
     )
   }
-
 }
 
 export default App
